@@ -1,6 +1,7 @@
 #include <iostream>
 #include <array>
-#include <vector> //pour tableau dynamique
+#include <vector>
+#include <iomanip>
 
 using namespace std;
 
@@ -14,6 +15,7 @@ int main(){
                         'a', 'c', 'b', 'c','c', 'a', 'b', 'a', 'b', 'c'}; // (stock les bonnes reponses !)
 
     char user_answ;
+    char lenght_answ;
     string question[] = { // Tableau quit stock les questions
         //THEME GAMING
     "1.	Quelle est le nom de la mascotte moustachu de Nintendo a casquette rouge :",
@@ -76,7 +78,31 @@ int main(){
 
             cout << answer[i][j] << endl ;
         }
-        cin >> user_answ ; // On entre la réponse ici
+            cin >> user_answ ; // On entre la réponse ici
+            cin.sync(); // ignore si il y a plus de 1 caractere saisie
+
+       /* do{
+
+
+             if(cin.get(user_answ )){
+                cout << "Veuillez entrer uniquement la lettre de la reponse (a/b/c) " << endl;
+             }
+        }while(sizeof(user_answ) > 1);*/
+
+        if(user_answ != 'a' && user_answ !='b' && user_answ !='c'){
+
+            while(user_answ != 'a' || user_answ !='b' || user_answ !='c'){
+
+                cout << "Veuillez entrer uniquement la lettre de la reponse (a/b/c) " << endl;
+                cin >> user_answ ;
+                cin.sync();
+
+                if(user_answ == 'a' || user_answ =='b' || user_answ =='c'){
+
+                    break;
+                    }
+                }
+            }
 
         system ("CLS"); // afficher uniquement la derniere question
         stock_answ.push_back(user_answ); // stock la reponse dans un tableau dynamique

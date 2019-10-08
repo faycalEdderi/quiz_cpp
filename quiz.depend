@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1570565390 source:c:\users\fayce\desktop\cpp\quiz\main.cpp
+1570571163 source:c:\users\fayce\desktop\cpp\quiz\main.cpp
 	<iostream>
 	<array>
 	<vector>
+	<iomanip>
 
