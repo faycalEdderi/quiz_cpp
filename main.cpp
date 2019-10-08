@@ -10,7 +10,8 @@ int main(){
     int result(0);
     int question_nb(1);
 // !! NE PAS LIRE LA LIGNE EN DESSOUS AVANT DE JOUER !!
-    char good_answ[] ={'b','c', 'a', 'a', 'b', 'b', 'b', 'c', 'b', 'a'}; // (stock les bonnes reponses !)
+    char good_answ[] ={'b','c', 'a', 'a', 'b', 'b', 'b', 'c', 'b', 'a',
+                        'a', 'c', 'b', 'c','c', 'a', 'b', 'a', 'b', 'c'}; // (stock les bonnes reponses !)
 
     char user_answ;
     string question[] = { // Tableau quit stock les questions
@@ -25,10 +26,23 @@ int main(){
     "8. En 2004 qui sont les participants du combat epic de Street Fighter renomme Evo Moment 37 ?",
     "9. La serie Dark Souls est developpe par :",
     "10. Dans The Witcher 3 quel est le nom de Geralt en langage ancien ?",
+    // THEME INFORMATIQUE
+    "11. Quel est le nom du systeme d’exploitation de Microsoft ?",
+    "12. Quel logiciel permet la retouche photo ?",
+    "13. HTML est il un langage de programmation ?",
+    "14. Que signifie VM ?",
+    "15. Quelle est la date de parution du framework Bootstrap ?",
+    "16. Qui est a l’origine du projet Jquery",
+    "17. Quel est le langage le plus ancien ?",
+    "18. Quel langage utilise le framework Django",
+    "19. Qu’est ce qu’une BDD ? ",
+    "20. Quel est le nom de l’ancetre d’internet ?",
+
+
     };
 
 
-     const string answer[10][3]{ // Stockage des réponses possibles
+     const string answer[20][3]{ // Stockage des réponses possibles
         {"a. Luigi", "b. Mario", "c. Yoshi"},
         {"a. Bowser", "b. Zelda", "c. Link"},
         {"a. Un herisson ", "b. Une tortue", "c. Un dinosaure "},
@@ -39,6 +53,17 @@ int main(){
         {"a. Zeraisse vs Chris G", "b. Bonchan vs Lu Alex Valle", "c. Justin Wong vs Daigo"},
         {"a. Ubisoft", "b. From Softwar", "c. Capcom"},
         {"a. Gwynbleidd", "b. Zireael", "c. Aen Seidhe"},
+        // REPONSE THEME INFORMATIQUE
+        { "a. Windows", "b. Linux", "c. macOS" },
+        { "a. Sony Vegas Pro", "b. Audacity", "c. Photoshop" },
+        { "a. Oui", "b. Non", "c. Oui et Non" },
+        { "a. Visionary Marketing ", "b. View Message", "c. Virtual Machin" },
+        { "a. 1999", "b. 2006", "c. 2011" },
+        { "a. John Resig", "b. Rasmus Lerdorf", "c. Yukihiro Matsumoto" },
+        { "a. Ruby", "b. Php", "c. Java" },
+        { "a. Python", "b. JavaScript", "c. Php" },
+        { "a. Une Boite De Dialogue !", "b. Une Base De Donnee !", "c. Une Barriere De Degele …?" },
+        { "a. Larpanet", "b. Darpanet", "c. Arpanet " },
     };
 
 
@@ -68,14 +93,22 @@ int main(){
          }
 
     }
-    cout << "votre score est de : " << result << "/10" << endl << endl;
+    cout << "votre score est de : " << result << "/20" << endl << endl;
 
-    /*if(result <= 1){
+    if(result < 10){
         cout << "Echec !";
-    }else if( result == 2){
+    }else if( result >= 10 && result <= 15){
+    cout << "Bien";
+
+    }
+    else if( result > 15 && result <= 19){
+    cout << "Super ! ";
+
+    }
+    else if( result == 20){
     cout << "Perfect ! felicitation !";
 
-    }*/
+    }
 
 return 0;
 }
