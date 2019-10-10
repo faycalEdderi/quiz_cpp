@@ -1,7 +1,6 @@
 #include <iostream>
 #include <array>
 #include <vector>
-#include <iomanip>
 
 using namespace std;
 
@@ -16,6 +15,8 @@ int main(){
 
     char user_answ;
     char lenght_answ;
+    char retry;
+    string pseudo;
     string question[] = { // Tableau quit stock les questions
         //THEME GAMING
     "1.	Quelle est le nom de la mascotte moustachu de Nintendo a casquette rouge :",
@@ -68,6 +69,17 @@ int main(){
         { "a. Larpanet", "b. Darpanet", "c. Arpanet " },
     };
 
+cout << "Bienvenue sur le quizz realise par Edderi Fayçal" << endl;
+cout << "Le but du jeu est simple, marquer le plus de points" << endl;
+
+cout << "Le quiz est compose de 2 themes : " << endl  << "Theme 1 : jeux videos \nTheme 2 : Informatique\n" << endl ;
+
+cout << "Entrez votre pseudo pour commencer" << endl;
+cin >> pseudo;
+cout << endl;
+
+do{
+
 
     for(int i = 0; i< sizeof(question)/sizeof(*question); i++){
 
@@ -119,22 +131,28 @@ int main(){
          }
 
     }
-    cout << "votre score est de : " << result << "/20" << endl << endl;
+    cout << pseudo << "votre score est de : " << result << "/20" << endl << endl;
 
     if(result < 10){
-        cout << "Echec !";
+        cout << "Dommage " << pseudo << " Echec !" << endl;
     }else if( result >= 10 && result <= 15){
-    cout << "Bien";
+   cout << "Bravo " << pseudo << " Bien" << endl;
 
     }
     else if( result > 15 && result <= 19){
-    cout << "Super ! ";
+    cout << "Felicitation " << pseudo << " Super ! " << endl;
 
     }
     else if( result == 20){
-    cout << "Perfect ! felicitation !";
+    cout << "Incroyable " << pseudo << " Perfect ! trop fort !" << endl;
 
     }
+
+    cout << "Recommencer ? (o/n) " << endl;
+    cin >> retry;
+    cout << endl;
+
+}while(retry == 'o');
 
 return 0;
 }
