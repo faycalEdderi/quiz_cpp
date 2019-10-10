@@ -19,7 +19,7 @@ int main(){
     string pseudo;
     string question[] = { // Tableau quit stock les questions
         //THEME GAMING
-    "1.	Quelle est le nom de la mascotte moustachu de Nintendo a casquette rouge :",
+    "Theme jeux videos: \n1. Quelle est le nom de la mascotte moustachu de Nintendo a casquette rouge :",
     "2. Qui est le hero principal de la saga The legend of Zelda ? ",
     "3. Sonic (mascotte de Sega) est : ",
     "4. Quel jeu a developpe par Rockstar Games ?",
@@ -30,16 +30,16 @@ int main(){
     "9. La serie Dark Souls est developpe par :",
     "10. Dans The Witcher 3 quel est le nom de Geralt en langage ancien ?",
     // THEME INFORMATIQUE
-    "11. Quel est le nom du systeme d’exploitation de Microsoft ?",
+    "Theme informatique : \n11. Quel est le nom du systeme d exploitation de Microsoft ?",
     "12. Quel logiciel permet la retouche photo ?",
     "13. HTML est il un langage de programmation ?",
     "14. Que signifie VM ?",
     "15. Quelle est la date de parution du framework Bootstrap ?",
-    "16. Qui est a l’origine du projet Jquery",
+    "16. Qui est a l origine du projet Jquery",
     "17. Quel est le langage le plus ancien ?",
     "18. Quel langage utilise le framework Django",
     "19. Qu’est ce qu’une BDD ? ",
-    "20. Quel est le nom de l’ancetre d’internet ?",
+    "20. Quel est le nom de l ancetre d internet ?",
 
 
     };
@@ -151,6 +151,10 @@ do{
     cout << "Recommencer ? (o/n) " << endl;
     cin >> retry;
     cout << endl;
+
+
+    stock_answ.clear();
+    result = 0;
 
 }while(retry == 'o');
 
