@@ -38,7 +38,7 @@ int main(){
     "16. Qui est a l origine du projet Jquery",
     "17. Quel est le langage le plus ancien ?",
     "18. Quel langage utilise le framework Django",
-    "19. Qu’est ce qu’une BDD ? ",
+    "19. Que signifie BDD ? ",
     "20. Quel est le nom de l ancetre d internet ?",
 
 
@@ -69,14 +69,16 @@ int main(){
         { "a. Larpanet", "b. Darpanet", "c. Arpanet " },
     };
 
-cout << "Bienvenue sur le quizz realise par Edderi Fayçal" << endl;
+cout << "Bienvenue sur le quiz realise par Edderi Faycal" << endl;
 cout << "Le but du jeu est simple, marquer le plus de points" << endl;
+cout << "Pour repondre au question selectionne simplement a, b ou c " << endl;
 
 cout << "Le quiz est compose de 2 themes : " << endl  << "Theme 1 : jeux videos \nTheme 2 : Informatique\n" << endl ;
 
 cout << "Entrez votre pseudo pour commencer" << endl;
 cin >> pseudo;
-cout << endl;
+
+system("CLS");
 
 do{
 
@@ -93,13 +95,6 @@ do{
             cin >> user_answ ; // On entre la réponse ici
             cin.sync(); // ignore si il y a plus de 1 caractere saisie
 
-       /* do{
-
-
-             if(cin.get(user_answ )){
-                cout << "Veuillez entrer uniquement la lettre de la reponse (a/b/c) " << endl;
-             }
-        }while(sizeof(user_answ) > 1);*/
 
         if(user_answ != 'a' && user_answ !='b' && user_answ !='c'){
 
